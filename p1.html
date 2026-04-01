@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Statement</title>
+
+<style>
+
+
+body{
+  margin: 0;
+  background-color: #1e0e9aa1;
+  position: relative;
+  z-index: 0;
+}
+
+
+body::before{
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("img/m10.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.5;
+
+  z-index: -1;
+}
+
+
+.title{
+  color: rgb(147, 215, 235);
+  margin: 0;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Times New Roman";
+  font-size: 60px;
+}
+
+
+.statement{
+  margin: 40px auto;
+  padding: 60px;
+
+  width: 60%; /* controla el ancho del bloque */
+  
+  background-color: rgba(0,0,0,0.3);
+  
+  color: rgb(147, 215, 235);
+  font-family: "Times New Roman";
+  font-size: 22px;
+  line-height: 1.6; /* mejora lectura */
+
+  text-align: justify;
+}
+
+
+.volver{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.volver a{
+  color: rgb(147, 215, 235);
+  font-size: 25px;
+  text-decoration: none;
+  background-color: #8a87e9b9;
+  padding: 10px 20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="title">
+  <h1>STATEMENT</h1>
+</div>
+
+<!-- ===== TEXTO ===== -->
+<div class="statement">
+
+
+
+<p>
+Mi obra explora la pintura como una forma de tensión entre lo controversial y lo social, atravesado por violencia, poder y ritualidad. A través de imágenes incómodas, busco confrontar al espectador con aquello que suele permanecer oculto y que se haga cuestionar. Me interesa desdibujar los límites entre lo humano, lo animal y lo simbólico, generando un espacio donde lo bello y lo perturbador coexisten.
+</p>
+
+
+
+</div>
+
+<!-- ===== VOLVER ===== -->
+<div class="volver">
+  <a href="index.html">Volver</a>
+</div>
+
+</body>
+
+</html>
