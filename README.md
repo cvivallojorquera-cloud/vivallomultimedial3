@@ -1,1 +1,2 @@
-
+Pagina basica de HTML, con idea de ser minimalista en colores, pero con bastante informacion. Clase a clase fui arreglando y mejorando la pagina con ayuda de mi compañero Axel, esto en el fondo y organizacion de la pagina. La idea de la pagina principalmente fue el responder a que significaba para mi lo multimedial, respondido esto empece a apropiarme de la pagina con el fin de utilizarla para mi cuenta de arte en instagram.
+Para la busqueda de fuentes utilice chatgpt
