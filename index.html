@@ -102,33 +102,55 @@ font-family: 'Special Elite', monospace;
 
 }
 
-/* CONTENEDOR */
+/* CONTENEDOR CENTRADO */
 .botones{
   display: flex;
-  justify-content: center; /* centra todo */
-  gap: 80px; /* espacio entre botones */
-  margin-top: 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 60px;
 }
 
 /* BOTONES */
 .parra2{
+  background: transparent; /* sin fondo */
   color: white;
-  padding: 15px 30px; /* en vez de height */
   text-decoration: none;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
 
-  font-family: 'Special Elite', monospace;
-  font-size: 20px;
+  padding: 10px 20px;
 
-  transition: 0.3s;
+  font-family: 'Pirata One', cursive;
+  font-size: 22px;
+  letter-spacing: 2px;
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  transition: all 0.4s ease;
+
+  /* respiración */
+  animation: respirar 4s ease-in-out infinite;
 }
 
-/* HOVER (recomendado) */
+/* HOVER */
 .parra2:hover{
-  background-color: #a9a6ff;
-  color: black;
+  border-color: white;
+  transform: scale(1.05);
+}
+
+/* CLICK (quita el azul feo) */
+.parra2:active,
+.parra2:focus,
+.parra2:visited{
+  color: white;
+  outline: none;
+  background: transparent;
+}
+
+/* ANIMACIÓN RESPIRAR */
+@keyframes respirar{
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
 }
 
 </style>
