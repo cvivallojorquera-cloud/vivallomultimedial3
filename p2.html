@@ -79,11 +79,11 @@ body::after{
   transform: scale(1.03);
 }
 
-/* MODAL (ARREGLADO) */
+/* MODAL */
 .modal{
   display: none;
   position: fixed;
-  inset: 0; /* 🔥 mejor que top/left */
+  inset: 0; 
 
   background: rgba(0,0,0,0.95);
 
@@ -92,7 +92,7 @@ body::after{
   flex-direction: column;
   text-align: center;
 
-  z-index: 9999; /* 🔥 CLAVE */
+  z-index: 9999; 
 }
 
 /* IMAGEN GRANDE */
@@ -143,17 +143,17 @@ body::after{
 
 <div class="galeria">
 
-  <img src="img/m1.jpg" onclick="abrirModal(this)" data-info="Obra 1<br>2024<br>"Carboncillo sobre papel">
-  <img src="img/m2.jpg" onclick="abrirModal(this)" data-info="Obra 2<br>2026<br>"Acrílico y Óleo sobre tela">
-  <img src="img/m3.jpg" onclick="abrirModal(this)" data-info="Obra 3<br>2026<br>"Acrílico y Óleo sobre tela">
-  <img src="img/m4.jpg" onclick="abrirModal(this)" data-info="Obra 4<br>2023<br>"Acrílico retrato en vivo">
+  <img src="img/m1.jpg" onclick="abrirModal(this)" data-info="Sid Vicious<br>2024<br>"Carboncillo sobre papel">
+  <img src="img/m2.jpg" onclick="abrirModal(this)" data-info="Milk Moustache 3<br>2026<br>"Acrílico y Óleo sobre tela">
+  <img src="img/m3.jpg" onclick="abrirModal(this)" data-info="Milk Moustache 5<br>2026<br>"Acrílico y Óleo sobre tela">
+  <img src="img/m4.jpg" onclick="abrirModal(this)" data-info="Sin nombre<br>2023<br>"Acrílico retrato en vivo">
 
-  <img src="img/m5.jpg" onclick="abrirModal(this)" data-info="Obra 5<br>2025<br>"Acrílico y Óleo sobre tela">
-  <img src="img/m6.jpg" onclick="abrirModal(this)" data-info="Obra 6<br>2024<br>"Grafito sobre papel">
-  <img src="img/m7.jpg" onclick="abrirModal(this)" data-info="Obra 7<br>2024<br>"Grafito sobre papel">
-  <img src="img/m8.jpg" onclick="abrirModal(this)" data-info="Obra 8<br>2024<br>"Acrílico y Óleo sobre tela">
-  <img src="img/m11.jpg" onclick="abrirModal(this)" data-info="Obra 8<br>2024<br>"Lapiz pasta sobre papel">
-  <img src="img/m10.jpg" onclick="abrirModal(this)" data-info="Obra 8<br>2024<br>"Carboncillo sobre papel kraft">
+  <img src="img/m5.jpg" onclick="abrirModal(this)" data-info="Habitacion de Carne<br>2025<br>"Acrílico y Óleo sobre tela">
+  <img src="img/m6.jpg" onclick="abrirModal(this)" data-info="Vampira<br>2024<br>"Grafito sobre papel">
+  <img src="img/m7.jpg" onclick="abrirModal(this)" data-info="Identidad 2<br>2024<br>"Grafito sobre papel">
+  <img src="img/m8.jpg" onclick="abrirModal(this)" data-info="Sin Nombre<br>2024<br>"Acrílico y Óleo sobre tela">
+  <img src="img/m11.jpg" onclick="abrirModal(this)" data-info="Sin Nombre<br>2024<br>"Lapiz pasta sobre papel">
+  <img src="img/m10.jpg" onclick="abrirModal(this)" data-info="Multiespecie<br>2024<br>"Carboncillo sobre papel kraft">
 
 </div>
 
@@ -175,7 +175,7 @@ function abrirModal(img){
   document.getElementById("textoModal").innerHTML = img.dataset.info;
 }
 
-/* 🔥 evita que cierre al hacer click en la imagen */
+/* PARA QUE NO SE CIERRE LA IMAGEN */
 document.getElementById("imgModal").onclick = function(e){
   e.stopPropagation();
 };
