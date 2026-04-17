@@ -6,35 +6,32 @@
 <meta charset="UTF-8">
 <title>Portafolio</title>
 
-<!-- FUENTE GOTICA LEGIBLE -->
 <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
-  <style>
+
+<style>
 
 body{
   margin: 0;
   background-color: #0A0F1C;
   position: relative;
-  z-index: 0;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Fondo con imagen */
+/* Fondo */
 body::before{
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-
   background-image: url("img/m10.jpg"); 
-  background-size: cover; 
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-
-  opacity: 0.5; 
-  z-index: -1; 
+  opacity: 0.5;
+  z-index: -1;
 }
 
+/* Marco */
 body::after{
   content:"";
   position: fixed;
@@ -42,90 +39,71 @@ body::after{
   left: 15px;
   width: calc(100% - 30px);
   height: calc(100% - 30px);
-
   border: 1px solid rgba(255,255,255,0.15);
   box-shadow: 
     0 0 10px rgba(255,255,255,0.05),
     inset 0 0 20px rgba(255,255,255,0.03);
-
   pointer-events: none;
 }
-    
-/* TITULO PRINCIPAL */
+
+/* TITULO */
 .title {
   font-family: 'Pirata One', cursive;
   font-size: 80px;
-  letter-spacing: 2px;
- color: rgb(255, 255, 255);
- margin: 0;
- height: 50vh;
- display: flex;
- justify-content: center;
- align-items: center;
-}
-  
-/* SUBTITULO */
-.title2{
-  position: absolute;
-  top: 30%; /* ajusta este valor para subir/bajar */
-  left: 50%;
-  transform: translate(-50%, -50%);
-
   color: white;
-  margin: 0;
-
-  font-family: 'Cinzel', serif;
-  font-size: 17px;
-}
-
-/* TEXTO ARTISTA */
-.parra1{
-
- background-color: transparent;
-
- color: rgb(255, 255, 255);
-
- margin: 0;
-
- height: 40vh;
-
- display:flex;
-
- justify-content: center;
-
- align-items: center;
-
- /* FUENTE GOTICA */
-font-family: 'Special Elite', monospace;
-
- font-size: 30px;
-
-}
-
-/* CONTENEDOR EN LA PARTE INFERIOR */
-.botones{
-  position: relative;
-  bottom: 40px; /* distancia desde abajo */
-  left: 50%;
-  transform: translaeY(-50%);
-
-  display: flex-start;
-  gap: 40px;
+  height: 50vh;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* SUBTITULO */
+.title2{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Cinzel', serif;
+  font-size: 17px;
+}
+
+/* TEXTO */
+.parra1{
+  color: white;
+  height: 40vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Special Elite', monospace;
+  font-size: 30px;
+}
+
+/* CONTENEDOR BOTONES (derecha abajo) */
+.botones{
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+
+  display: flex;
+  gap: 30px;
+}
+
 /* BOTONES */
-. color: rgb(255, 255, 255);
- margin: 0;
- height: 10vh;
- display:flex;
- justify-content: center;
- align-items: center;
+.parra2{
+  color: white;
+  text-decoration: none;
+
+  padding: 10px 20px;
+
   font-family: 'Pirata One', cursive;
   font-size: 22px;
   letter-spacing: 2px;
-  transition: all 0.4s ease;
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  transition: 0.4s;
+
   animation: respirar 4s ease-in-out infinite;
 }
 
@@ -135,24 +113,16 @@ font-family: 'Special Elite', monospace;
   transform: scale(1.05);
 }
 
-/* EVITA CAMBIO DE COLOR AL CLICK */
+/* CLICK */
 .parra2:visited,
 .parra2:active,
 .parra2:focus{
   color: white;
   background: transparent;
   outline: none;
-
-/* CLICK  */
-.parra2:active,
-.parra2:focus,
-.parra2:visited{
-  color: white;
-  outline: none;
-  background: transparent;
 }
 
-/* ANIMACIÓN RESPIRAR */
+/* ANIMACIÓN */
 @keyframes respirar{
   0% { opacity: 0.6; }
   50% { opacity: 1; }
@@ -166,29 +136,23 @@ font-family: 'Special Elite', monospace;
 <body>
 
 <div class="title">
-<h1>Portafolio</h1>
+  <h1>Portafolio</h1>
 </div>
 
 <div class="title2">
-<h2>thekissofjuddas</h2>
+  <h2>thekissofjuddas</h2>
 </div>
 
 <div class="parra1">
-<h2>Artista Visual</h2>
+  <h2>Artista Visual</h2>
 </div>
 
-<div class="parra2">
-  <a href="p1.html">Obra</a>
-</div>
-
-<div class="parra2">
-  <a href="p2.html">Galería</a>
-</div>
-
-<div class="parra2">
-  <a href="p3.html">Contacto</a>
+<!-- BOTONES CORRECTAMENTE AGRUPADOS -->
+<div class="botones">
+  <a href="p1.html" class="parra2">Obra</a>
+  <a href="p2.html" class="parra2">Galería</a>
+  <a href="p3.html" class="parra2">Contacto</a>
 </div>
 
 </body>
-
 </html>
