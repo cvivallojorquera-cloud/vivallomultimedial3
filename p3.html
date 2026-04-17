@@ -4,48 +4,31 @@
 <head>
 <meta charset="UTF-8">
 <title>Contacto</title>
-<!-- TIPOGRAFIA -->
-<link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
-<style>
 
+<link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+
+<style>
 
 body{
   margin: 0;
-   background-color: #0A0F1C;
-  position: relative;
-  z-index: 0;
+  background-color: #0A0F1C;
+  height: 100vh;
+  overflow: hidden;
 }
 
-
+/* FONDO */
 body::before{
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-
   background-image: url("img/Fondo.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-
   opacity: 0.5;
-
   z-index: -1;
 }
 
-/*TITULO*/
-.title{
-  color: rgb(255, 255, 255);
-  margin: 0;
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Pirata One', cursive;
-  font-size: 60px;
-}
 /* MARCO */
 body::after{
   content:"";
@@ -61,67 +44,88 @@ body::after{
   pointer-events: none;
 }
 
+/* CONTENEDOR CENTRAL */
 .contacto{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
+/* TITULO */
+.title{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  font-family: 'Pirata One', cursive;
+  font-size: 60px;
+  color: white;
+}
 
+/* FOTO */
 .foto{
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 20px 0;
+
+  filter: grayscale(100%) contrast(120%);
+  transition: 0.4s;
 }
 
+.foto:hover{
+  filter: grayscale(0%);
+}
 
+/* LINKS */
 .links{
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 20px;
+  margin-top: 30px;
 }
 
 .links a{
-  color: rgb(147, 215, 235);
+  color: white;
   font-size: 22px;
   text-decoration: none;
-  background-color: #8a87e9b9;
-  padding: 10px 20px;
-  text-align: center;
-}
-
-
-/* BOTÓN VOLVER */
-.volver{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-
-/* LINK */
-.volver a{
-  color: rgb(255, 255, 255);
-  font-size: 25px;
-  text-decoration: none;
-  padding: 10px 20px;
-
-  border: 1px solid rgba(255,255,255,0.2);
-
-  font-family: 'Pirata One', cursive;
   letter-spacing: 2px;
 
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 10px 25px;
+
+  font-family: 'Pirata One', cursive;
+
   transition: 0.4s;
-  animation: respirar 4s ease-in-out infinite;
+  animation: respirar 4s infinite;
 }
 
-/* HOVER */
-.volver a:hover{
+.links a:hover{
   border-color: white;
   transform: scale(1.05);
+}
+
+/* BOTÓN VOLVER ABAJO */
+.volver{
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.volver a{
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 8px 20px;
+  font-family: 'Pirata One', cursive;
 }
 
 /* ANIMACIÓN */
@@ -131,37 +135,30 @@ body::after{
   100% { opacity: 0.6; }
 }
 
-
 </style>
-
 </head>
 
 <body>
 
-<div class="title">
-  <h1>CONTACTO</h1>
-</div>
+<div class="title">CONTACTO</div>
 
 <div class="contacto">
 
-
   <img src="img/contacto.jpg" class="foto">
 
- 
   <div class="links">
     <a href="https://instagram.com/thekissofjuddas" target="_blank">Instagram</a>
-   <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vivallo.c16@gmail.com" target="_blank">
-  Correo
-</a>
+
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vivallo.c16@gmail.com" target="_blank">
+      Correo
+    </a>
   </div>
 
 </div>
-
 
 <div class="volver">
   <a href="index.html">Volver</a>
 </div>
 
 </body>
-
 </html>
