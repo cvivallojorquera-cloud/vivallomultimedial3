@@ -2,127 +2,157 @@
 <html lang="es">
 
 <head>
+
 <meta charset="UTF-8">
 <title>Multimedial</title>
 
-<!-- TIPOGRAFÍA -->
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
-
+<!-- FUENTE GOTICA LEGIBLE -->
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 <style>
 
-/* BASE */
 body{
-  margin:0;
-  background:black;
-  color:white;
-  font-family:'Cinzel', serif;
-  overflow:hidden;
+  margin: 0;
+  background-color: #1e0e9aa1;
+  position: relative;
+  z-index: 0;
 }
 
-/* IMAGEN DE FONDO */
-.bg{
-  position:fixed;
-  width:100%;
-  height:100%;
-  background-image:url("img/m10.jpg");
-  background-size:cover;
-  background-position:center;
-  filter:grayscale(100%) brightness(0.4) contrast(120%);
+/* Fondo con imagen */
+body::before{
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("img/m10.jpg"); 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.5; 
+  z-index: -1; 
 }
 
-/* CAPA OSCURA */
-.overlay{
-  position:fixed;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.5);
-}
+/* TITULO PRINCIPAL */
+.title{
 
-/* CONTENIDO CENTRADO */
-.container{
-  position:absolute;
-  width:100%;
-  height:100%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-}
+ color: rgb(255, 255, 255);
+ margin: 0;
 
-/* TITULO */
-h1{
-  font-family:'UnifrakturCook', cursive;
-  font-size:80px;
-  margin:0;
-  letter-spacing:2px;
+ height: 50vh;
+
+ display: flex;
+
+ justify-content: center;
+
+ align-items: center;
+
+ /* FUENTE GOTICA */
+font-family: 'Special Elite', monospace;
+
+ font-size: 60px;
+
 }
 
 /* SUBTITULO */
-h2{
-  font-size:18px;
-  font-weight:400;
-  color:#ccc;
-  margin-top:10px;
+.title2{
+
+ color: rgb(255, 255, 255);
+ margin: 0;
+
+ height: 5vh;
+
+ display: flex;
+
+ justify-content: center;
+
+ align-items: center;
+
+font-family: 'Special Elite', monospace;
+
+ font-size: 40px;
+
 }
 
-/* BOTÓN MINIMAL */
-.statement{
-  margin-top:60px;
-  font-size:14px;
-  text-decoration:none;
-  color:#aaa;
-  border:1px solid #444;
-  padding:10px 25px;
-  transition:0.4s;
+/* TEXTO ARTISTA */
+.parra1{
+
+ background-color: transparent;
+
+ color: rgb(255, 255, 255);
+
+ margin: 0;
+
+ height: 40vh;
+
+ display:flex;
+
+ justify-content: center;
+
+ align-items: center;
+
+ /* FUENTE GOTICA */
+font-family: 'Special Elite', monospace;
+
+ font-size: 30px;
+
 }
 
-.statement:hover{
-  color:white;
-  border-color:white;
-}
-/* BOTÓN MINIMAL 2 */
-.galeria{
-  margin-top:60px;
-  font-size:14px;
-  text-decoration:none;
-  color:#aaa;
-  border:1px solid #444;
-  padding:10px 25px;
-  transition:0.4s;
-}
+/* BOTONES */
+.parra2{
 
-.galeria:hover{
-  color:white;
-  border-color:white;
-}
-/* DETALLE SUTIL (RESPIRACIÓN) */
-.enter{
-  animation: fade 3s infinite alternate;
-}
+ background-color: #8a87e9b9;
 
-@keyframes fade{
-  from{opacity:0.4;}
-  to{opacity:1;}
+ color: rgb(255, 255, 255);
+
+ margin: 0;
+
+ height: 10vh;
+
+ display:flex;
+
+ justify-content: center;
+
+ align-items: center;
+
+font-family: 'Special Elite', monospace;
+
+ font-size: 30px;
+
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div class="bg"></div>
-<div class="overlay"></div>
+<div class="title">
+<h1>MULTIMEDIAL</h1>
+</div>
 
-<div class="container">
-  <h1>MULTIMEDIAL</h1>
-  <h2>Kevin Vivallo</h2>
+<div class="title2">
+<h2>Kevin Vivallo</h2>
+</div>
 
-  <a href="p1.html" class="enter">Entrar</a>
+<div class="parra1">
+<h2>Artista Visual</h2>
+</div>
+
+<div class="parra2">
+  <a href="p1.html">Obra</a>
+</div>
+
+<div class="parra2">
+  <a href="p2.html">Galería</a>
+</div>
+
+<div class="parra2">
+  <a href="p3.html">Contacto</a>
 </div>
 
 </body>
-</html>
 
-</body>
 </html>
