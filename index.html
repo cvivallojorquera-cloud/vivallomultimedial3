@@ -5,130 +5,91 @@
 <meta charset="UTF-8">
 <title>Multimedial</title>
 
-<!-- TIPOGRAFÍA GÓTICA -->
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+<!-- TIPOGRAFÍA -->
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 
 /* BASE */
 body{
-  margin: 0;
-  background-color: #0a0a0a;
-  font-family: 'Cinzel', serif;
-  overflow-x: hidden;
+  margin:0;
+  background:black;
+  color:white;
+  font-family:'Cinzel', serif;
+  overflow:hidden;
 }
 
-/* FONDO */
-body::before{
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-image: url("img/m10.jpg");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.25;
-  z-index: -2;
-}
-
-/* TEXTURA */
-body::after{
-  content:"";
-  position: fixed;
+/* IMAGEN DE FONDO */
+.bg{
+  position:fixed;
   width:100%;
   height:100%;
-  background: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 3px 3px;
-  z-index:-1;
+  background-image:url("img/m10.jpg");
+  background-size:cover;
+  background-position:center;
+  filter:grayscale(100%) brightness(0.4) contrast(120%);
 }
 
-/* SECCIÓN */
-.section{
-  height: 120vh;
-  position: relative;
+/* CAPA OSCURA */
+.overlay{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
 }
 
-/* TITULO PRINCIPAL */
-.title{
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  font-size: 90px;
-  color: white;
-  font-family: 'UnifrakturCook', cursive;
+/* CONTENIDO CENTRADO */
+.container{
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
 }
 
-/* NOMBRE */
-.title2{
-  position: absolute;
-  top: 40%;
-  left: 12%;
-  font-size: 30px;
-  color: #ddd;
+/* TITULO */
+h1{
+  font-family:'UnifrakturCook', cursive;
+  font-size:80px;
+  margin:0;
+  letter-spacing:2px;
 }
 
-/* TEXTO */
-.parra1{
-  position: absolute;
-  top: 65%;
-  left: 10%;
-  max-width: 400px;
-  font-size: 18px;
-  line-height: 1.6;
-  color: #ccc;
+/* SUBTITULO */
+h2{
+  font-size:18px;
+  font-weight:400;
+  color:#ccc;
+  margin-top:10px;
 }
 
-/* LINKS COMO OBJETOS */
-.link{
-  position: absolute;
-  font-size: 22px;
-  text-decoration: none;
-  color: #bbb;
-  transition: 0.4s;
+/* BOTÓN MINIMAL */
+.enter{
+  margin-top:60px;
+  font-size:14px;
+  text-decoration:none;
+  color:#aaa;
+  border:1px solid #444;
+  padding:10px 25px;
+  transition:0.4s;
 }
 
-.link:hover{
-  color: white;
-  transform: scale(1.05);
+.enter:hover{
+  color:white;
+  border-color:white;
 }
 
-/* POSICIONES (ESTILO LIBRE) */
-.obra{
-  top: 30%;
-  right: 15%;
+/* DETALLE SUTIL (RESPIRACIÓN) */
+.enter{
+  animation: fade 3s infinite alternate;
 }
 
-.galeria{
-  top: 60%;
-  right: 25%;
-}
-
-.contacto{
-  top: 80%;
-  right: 10%;
-}
-
-/* IMÁGENES FLOTANTES */
-.img{
-  position: absolute;
-  width: 280px;
-  filter: grayscale(100%) contrast(120%);
-  transition: 0.5s;
-}
-
-.img:hover{
-  filter: grayscale(0%);
-  transform: scale(1.03);
-}
-
-.img1{
-  top: 25%;
-  left: 55%;
-}
-
-.img2{
-  top: 65%;
-  left: 40%;
+@keyframes fade{
+  from{opacity:0.4;}
+  to{opacity:1;}
 }
 
 </style>
@@ -136,27 +97,18 @@ body::after{
 
 <body>
 
-<div class="section">
+<div class="bg"></div>
+<div class="overlay"></div>
 
-  <div class="title">MULTIMEDIAL</div>
+<div class="container">
+  <h1>MULTIMEDIAL</h1>
+  <h2>Kevin Vivallo</h2>
 
-  <div class="title2">Kevin Vivallo</div>
-
-  <div class="parra1">
-    Artista visual enfocado en la exploración del cuerpo, la materia y lo ritual.  
-    La imagen se construye como fragmento, como residuo de una experiencia interna.
-  </div>
-
-  <!-- LINKS COMO COMPOSICIÓN -->
-  <a href="p1.html" class="link obra">Obra</a>
-  <a href="p2.html" class="link galeria">Galería</a>
-  <a href="p3.html" class="link contacto">Contacto</a>
-
-  <!-- IMÁGENES -->
-  <img src="img/m10.jpg" class="img img1">
-  <img src="img/m10.jpg" class="img img2">
-
+  <a href="p1.html" class="enter">Entrar</a>
 </div>
+
+</body>
+</html>
 
 </body>
 </html>
