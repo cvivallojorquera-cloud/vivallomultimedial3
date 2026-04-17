@@ -79,20 +79,21 @@ body::after{
   font-size: 30px;
 }
 
-/* CONTENEDOR BOTONES */
+/* BOTONES ABAJO CENTRADOS */
 .botones{
   position: absolute;
-  bottom: 40px;
-  center: 50px;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+
   display: flex;
-  gap: 30px;
+  gap: 40px;
 }
 
 /* BOTONES */
 .parra2{
   color: white;
   text-decoration: none;
-
   padding: 10px 20px;
 
   font-family: 'Pirata One', cursive;
@@ -102,23 +103,12 @@ body::after{
   border: 1px solid rgba(255,255,255,0.2);
 
   transition: 0.4s;
-
   animation: respirar 4s ease-in-out infinite;
 }
 
-/* HOVER */
 .parra2:hover{
   border-color: white;
   transform: scale(1.05);
-}
-
-/* CLICK */
-.parra2:visited,
-.parra2:active,
-.parra2:focus{
-  color: white;
-  background: transparent;
-  outline: none;
 }
 
 /* ANIMACIÓN */
@@ -127,7 +117,6 @@ body::after{
   50% { opacity: 1; }
   100% { opacity: 0.6; }
 }
-
 </style>
 
 </head>
