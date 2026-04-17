@@ -4,41 +4,34 @@
 <head>
 <meta charset="UTF-8">
 <title>Statement</title>
-/*TIPOGRAFIA*/
-<link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
-<style>
 
+<!-- TIPOGRAFIA -->
+<link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+
+<style>
 
 body{
   margin: 0;
   background-color: #1e0e9aa1;
   position: relative;
-  z-index: 0;
 }
 
-
+/* FONDO */
 body::before{
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-
   background-image: url("img/m10.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-
   opacity: 0.5;
-
   z-index: -1;
 }
 
-
+/* TITULO */
 .title{
   color: rgb(147, 215, 235);
-  margin: 0;
   height: 30vh;
   display: flex;
   justify-content: center;
@@ -47,36 +40,54 @@ body::before{
   font-size: 60px;
 }
 
-
+/* TEXTO */
 .statement{
   margin: 40px auto;
   padding: 60px;
-
-  width: 60%; 
-  
+  width: 60%;
   background-color: rgba(0,0,0,0.3);
-  
+
   color: rgb(147, 215, 235);
   font-family: 'Pirata One', cursive;
   font-size: 22px;
-  line-height: 1.6; 
-
+  line-height: 1.6;
   text-align: justify;
 }
 
-
+/* BOTÓN VOLVER */
 .volver{
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
 }
 
+/* LINK */
 .volver a{
   color: rgb(147, 215, 235);
   font-size: 25px;
   text-decoration: none;
-  background-color: #8a87e9b9;
   padding: 10px 20px;
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  font-family: 'Pirata One', cursive;
+  letter-spacing: 2px;
+
+  transition: 0.4s;
+  animation: respirar 4s ease-in-out infinite;
+}
+
+/* HOVER */
+.volver a:hover{
+  border-color: white;
+  transform: scale(1.05);
+}
+
+/* ANIMACIÓN */
+@keyframes respirar{
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
 }
 
 </style>
@@ -89,20 +100,12 @@ body::before{
   <h1>STATEMENT</h1>
 </div>
 
-<!-- ===== TEXTO ===== -->
 <div class="statement">
-
-
-
 <p>
 Mi obra explora la pintura como una forma de tensión entre lo controversial y lo social, atravesado por violencia, poder y ritualidad. A través de imágenes incómodas, busco confrontar al espectador con aquello que suele permanecer oculto y que se haga cuestionar. Me interesa desdibujar los límites entre lo humano, lo animal y lo simbólico, generando un espacio donde lo bello y lo perturbador coexisten.
 </p>
-
-
-
 </div>
 
-<!-- ===== VOLVER ===== -->
 <div class="volver">
   <a href="index.html">Volver</a>
 </div>
