@@ -2,157 +2,161 @@
 <html lang="es">
 
 <head>
-
 <meta charset="UTF-8">
 <title>Multimedial</title>
 
-<!-- FUENTE GOTICA LEGIBLE -->
-<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+<!-- TIPOGRAFÍA GÓTICA -->
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
 
+/* BASE */
 body{
   margin: 0;
-  background-color: #1e0e9aa1;
-  position: relative;
-  z-index: 0;
+  background-color: #0a0a0a;
+  font-family: 'Cinzel', serif;
+  overflow-x: hidden;
 }
 
-/* Fondo con imagen */
+/* FONDO */
 body::before{
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-
-  background-image: url("img/m10.jpg"); 
-  background-size: cover; 
+  background-image: url("img/m10.jpg");
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  opacity: 0.25;
+  z-index: -2;
+}
 
-  opacity: 0.5; 
-  z-index: -1; 
+/* TEXTURA */
+body::after{
+  content:"";
+  position: fixed;
+  width:100%;
+  height:100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 3px 3px;
+  z-index:-1;
+}
+
+/* SECCIÓN */
+.section{
+  height: 120vh;
+  position: relative;
 }
 
 /* TITULO PRINCIPAL */
 .title{
-
- color: rgb(255, 255, 255);
- margin: 0;
-
- height: 50vh;
-
- display: flex;
-
- justify-content: center;
-
- align-items: center;
-
- /* FUENTE GOTICA */
-font-family: 'Special Elite', monospace;
-
- font-size: 60px;
-
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  font-size: 90px;
+  color: white;
+  font-family: 'UnifrakturCook', cursive;
 }
 
-/* SUBTITULO */
+/* NOMBRE */
 .title2{
-
- color: rgb(255, 255, 255);
- margin: 0;
-
- height: 5vh;
-
- display: flex;
-
- justify-content: center;
-
- align-items: center;
-
-font-family: 'Special Elite', monospace;
-
- font-size: 40px;
-
+  position: absolute;
+  top: 40%;
+  left: 12%;
+  font-size: 30px;
+  color: #ddd;
 }
 
-/* TEXTO ARTISTA */
+/* TEXTO */
 .parra1{
-
- background-color: transparent;
-
- color: rgb(255, 255, 255);
-
- margin: 0;
-
- height: 40vh;
-
- display:flex;
-
- justify-content: center;
-
- align-items: center;
-
- /* FUENTE GOTICA */
-font-family: 'Special Elite', monospace;
-
- font-size: 30px;
-
+  position: absolute;
+  top: 65%;
+  left: 10%;
+  max-width: 400px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ccc;
 }
 
-/* BOTONES */
-.parra2{
+/* LINKS COMO OBJETOS */
+.link{
+  position: absolute;
+  font-size: 22px;
+  text-decoration: none;
+  color: #bbb;
+  transition: 0.4s;
+}
 
- background-color: #8a87e9b9;
+.link:hover{
+  color: white;
+  transform: scale(1.05);
+}
 
- color: rgb(255, 255, 255);
+/* POSICIONES (ESTILO LIBRE) */
+.obra{
+  top: 30%;
+  right: 15%;
+}
 
- margin: 0;
+.galeria{
+  top: 60%;
+  right: 25%;
+}
 
- height: 10vh;
+.contacto{
+  top: 80%;
+  right: 10%;
+}
 
- display:flex;
+/* IMÁGENES FLOTANTES */
+.img{
+  position: absolute;
+  width: 280px;
+  filter: grayscale(100%) contrast(120%);
+  transition: 0.5s;
+}
 
- justify-content: center;
+.img:hover{
+  filter: grayscale(0%);
+  transform: scale(1.03);
+}
 
- align-items: center;
+.img1{
+  top: 25%;
+  left: 55%;
+}
 
-font-family: 'Special Elite', monospace;
-
- font-size: 30px;
-
+.img2{
+  top: 65%;
+  left: 40%;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="title">
-<h1>MULTIMEDIAL</h1>
-</div>
+<div class="section">
 
-<div class="title2">
-<h2>Kevin Vivallo</h2>
-</div>
+  <div class="title">MULTIMEDIAL</div>
 
-<div class="parra1">
-<h2>Artista Visual</h2>
-</div>
+  <div class="title2">Kevin Vivallo</div>
 
-<div class="parra2">
-  <a href="p1.html">Obra</a>
-</div>
+  <div class="parra1">
+    Artista visual enfocado en la exploración del cuerpo, la materia y lo ritual.  
+    La imagen se construye como fragmento, como residuo de una experiencia interna.
+  </div>
 
-<div class="parra2">
-  <a href="p2.html">Galería</a>
-</div>
+  <!-- LINKS COMO COMPOSICIÓN -->
+  <a href="p1.html" class="link obra">Obra</a>
+  <a href="p2.html" class="link galeria">Galería</a>
+  <a href="p3.html" class="link contacto">Contacto</a>
 
-<div class="parra2">
-  <a href="p3.html">Contacto</a>
+  <!-- IMÁGENES -->
+  <img src="img/m10.jpg" class="img img1">
+  <img src="img/m10.jpg" class="img img2">
+
 </div>
 
 </body>
-
 </html>
