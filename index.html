@@ -102,18 +102,22 @@ font-family: 'Special Elite', monospace;
 
 }
 
-/* CONTENEDOR CENTRADO */
+/* CONTENEDOR EN LA PARTE INFERIOR */
 .botones{
+  position: absolute;
+  bottom: 40px; /* distancia desde abajo */
+  left: 50%;
+  transform: translateX(-50%);
+
   display: flex;
+  gap: 40px;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  margin-top: 60px;
 }
 
 /* BOTONES */
 .parra2{
-  background: transparent; /* sin fondo */
+  background: transparent;
   color: white;
   text-decoration: none;
 
@@ -127,7 +131,6 @@ font-family: 'Special Elite', monospace;
 
   transition: all 0.4s ease;
 
-  /* respiración */
   animation: respirar 4s ease-in-out infinite;
 }
 
@@ -137,7 +140,15 @@ font-family: 'Special Elite', monospace;
   transform: scale(1.05);
 }
 
-/* CLICK (quita el azul feo) */
+/* EVITA CAMBIO DE COLOR AL CLICK */
+.parra2:visited,
+.parra2:active,
+.parra2:focus{
+  color: white;
+  background: transparent;
+  outline: none;
+
+/* CLICK  */
 .parra2:active,
 .parra2:focus,
 .parra2:visited{
