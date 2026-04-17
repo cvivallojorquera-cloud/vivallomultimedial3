@@ -95,19 +95,42 @@ body::after{
 }
 
 
+/* BOTÓN VOLVER */
 .volver{
   display: flex;
   justify-content: center;
-  margin: 40px;
+  margin-bottom: 40px;
 }
 
+/* LINK */
 .volver a{
-  color: rgb(147, 215, 235);
+  color: rgb(255, 255, 255);
   font-size: 25px;
   text-decoration: none;
-  background-color: #8a87e9b9;
   padding: 10px 20px;
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  font-family: 'Pirata One', cursive;
+  letter-spacing: 2px;
+
+  transition: 0.4s;
+  animation: respirar 4s ease-in-out infinite;
 }
+
+/* HOVER */
+.volver a:hover{
+  border-color: white;
+  transform: scale(1.05);
+}
+
+/* ANIMACIÓN */
+@keyframes respirar{
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
 
 </style>
 
