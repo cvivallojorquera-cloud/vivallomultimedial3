@@ -83,11 +83,11 @@ body::after{
   filter: grayscale(0%);
 }
 
-/* LINKS */
+/* LINKS (AHORA SIN COLOR DE FONDO) */
 .links{
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px; /* más aire */
   margin-top: 30px;
 }
 
@@ -97,13 +97,16 @@ body::after{
   text-decoration: none;
   letter-spacing: 2px;
 
-  border: 1px solid rgba(255,255,255,0.2);
   padding: 10px 25px;
 
   font-family: 'Pirata One', cursive;
 
+  border: 1px solid rgba(255,255,255,0.15); /* más sutil */
+
+  background: transparent; /* ❗ clave */
+
   transition: 0.4s;
-  animation: respirar 4s infinite;
+  animation: respirar 4s ease-in-out infinite;
 }
 
 .links a:hover{
@@ -123,9 +126,18 @@ body::after{
   color: white;
   font-size: 20px;
   text-decoration: none;
-  border: 1px solid rgba(255,255,255,0.2);
+
+  border: 1px solid rgba(255,255,255,0.15);
   padding: 8px 20px;
+
   font-family: 'Pirata One', cursive;
+
+  transition: 0.4s;
+}
+
+.volver a:hover{
+  border-color: white;
+  transform: scale(1.05);
 }
 
 /* ANIMACIÓN */
