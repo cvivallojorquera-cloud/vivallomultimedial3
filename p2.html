@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 <meta charset="UTF-8">
 <title>Galería</title>
@@ -10,131 +9,109 @@
 <style>
 
 body{
-  margin: 0;
-  background-color: #0A0F1C;
+  margin:0;
+  background:#0A0F1C;
 }
 
 /* TITULO */
 .title{
-  color: white;
-  height: 20vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Pirata One', cursive;
-  font-size: 60px;
+  color:white;
+  height:20vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:'Pirata One';
+  font-size:60px;
 }
 
 /* PAGINAS */
-.pagina{
-  display: none;
-}
+.pagina{ display:none; }
 
 .pagina.activa{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  padding: 40px;
-  max-width: 1000px;
-  margin: auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+  padding:40px;
+  max-width:1000px;
+  margin:auto;
 }
 
 /* IMAGENES */
 .pagina img{
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  filter: grayscale(100%);
-  transition: 0.4s;
-  cursor: pointer;
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  filter:grayscale(100%);
+  cursor:pointer;
+  transition:0.3s;
 }
 
 .pagina img:hover{
-  filter: grayscale(0%);
-  transform: scale(1.03);
+  filter:grayscale(0%);
+  transform:scale(1.03);
 }
 
 /* CARPETAS */
 .paginacion{
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 20px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
 }
 
 .carpeta{
-  width: 120px;
-  height: 70px;
-  background: #111;
-  border: 1px solid rgba(255,255,255,0.2);
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Pirata One', cursive;
-  color: white;
-}
-
-.carpeta::before{
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 10px;
-  width: 40px;
-  height: 15px;
-  background: #111;
-  border: 1px solid rgba(255,255,255,0.2);
-  border-bottom: none;
+  width:120px;
+  height:70px;
+  background:#111;
+  border:1px solid rgba(255,255,255,0.2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  cursor:pointer;
+  font-family:'Pirata One';
 }
 
 .carpeta.activa{
-  border-color: white;
-  background: #1a1a1a;
+  border-color:white;
 }
 
-/* NAVEGACION */
+/* BOTONES */
 .navegacion{
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 40px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin:30px;
 }
 
-.navegacion button{
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.3);
-  color: white;
-  padding: 8px 20px;
-  cursor: pointer;
-  font-family: 'Pirata One', cursive;
+button{
+  background:transparent;
+  border:1px solid white;
+  color:white;
+  padding:8px 15px;
+  cursor:pointer;
 }
 
-.navegacion button:disabled{
-  opacity: 0.3;
-  cursor: default;
+button:disabled{
+  opacity:0.3;
 }
 
 /* MODAL */
 .modal{
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.95);
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display:none;
+  position:fixed;
+  inset:0;
+  background:black;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
 }
 
 .modal img{
-  max-width: 80%;
-  max-height: 60vh;
+  max-width:80%;
 }
 
 .modal p{
-  color: white;
-  margin-top: 20px;
-  font-family: 'Pirata One', cursive;
+  color:white;
 }
 
 </style>
@@ -142,34 +119,23 @@ body{
 
 <body>
 
-<div class="title">
-  <h1>GALERÍA</h1>
-</div>
+<div class="title">GALERÍA</div>
 
-<!-- PINTURA -->
+<!-- PAGINAS -->
 <div class="pagina activa">
-  <img src="img/m2.jpg" onclick="abrirModal(this)" data-info="Sid Vicious<br>2024<br>Acrílico y óleo">
-  <img src="img/m3.jpg" onclick="abrirModal(this)" data-info="Milk Moustache 3<br>2026<br>Acrílico y óleo">
-  <img src="img/m4.jpg" onclick="abrirModal(this)" data-info="Milk Moustache 5<br>2026<br>Acrílico y óleo">
-  <img src="img/m5.jpg" onclick="abrirModal(this)" data-info="Serie<br>2026<br>Acrílico y óleo">
-  <img src="img/m8.jpg" onclick="abrirModal(this)" data-info="Serie<br>2026<br>Acrílico y óleo">
-  <img src="img/m9.jpg" onclick="abrirModal(this)" data-info="Serie<br>2026<br>Acrílico y óleo">
+  <img src="img/m2.jpg" onclick="abrirModal(this)" data-info="Pintura 1">
+  <img src="img/m3.jpg" onclick="abrirModal(this)" data-info="Pintura 2">
+  <img src="img/m4.jpg" onclick="abrirModal(this)" data-info="Pintura 3">
 </div>
 
-<!-- GRAFITO -->
 <div class="pagina">
-  <img src="img/m1.jpg" onclick="abrirModal(this)" data-info="Sin nombre<br>2023<br>Grafito">
-  <img src="img/m6.jpg" onclick="abrirModal(this)" data-info="Habitación de carne<br>2025<br>Grafito">
-  <img src="img/m7.jpg" onclick="abrirModal(this)" data-info="Vampira<br>2024<br>Grafito">
-  <img src="img/m14.jpg" onclick="abrirModal(this)" data-info="Serie<br>2026<br>Grafito">
+  <img src="img/m1.jpg" onclick="abrirModal(this)" data-info="Grafito 1">
+  <img src="img/m6.jpg" onclick="abrirModal(this)" data-info="Grafito 2">
 </div>
 
-<!-- OTROS -->
 <div class="pagina">
-  <img src="img/m10.jpg" onclick="abrirModal(this)" data-info="Identidad 2<br>2024<br>Mixta">
-  <img src="img/m11.jpg" onclick="abrirModal(this)" data-info="Sin nombre<br>2024<br>Mixta">
-  <img src="img/m12.jpg" onclick="abrirModal(this)" data-info="Multiespecie<br>2024<br>Carboncillo">
-  <img src="img/m16.jpg" onclick="abrirModal(this)" data-info="Santx<br>2024<br>Lápiz pasta">
+  <img src="img/m10.jpg" onclick="abrirModal(this)" data-info="Otro 1">
+  <img src="img/m11.jpg" onclick="abrirModal(this)" data-info="Otro 2">
 </div>
 
 <!-- CARPETAS -->
@@ -179,10 +145,10 @@ body{
   <div class="carpeta" onclick="cambiarPagina(2)">OTROS</div>
 </div>
 
-<!-- NAVEGACION DINAMICA -->
+<!-- BOTONES DINAMICOS -->
 <div class="navegacion">
-  <button id="btnAnterior" onclick="anterior()"></button>
-  <button id="btnSiguiente" onclick="siguiente()"></button>
+  <button id="prev"></button>
+  <button id="next"></button>
 </div>
 
 <!-- MODAL -->
@@ -194,69 +160,47 @@ body{
 <script>
 
 let paginaActual = 0;
-const nombres = ["PINTURA", "GRAFITO", "OTROS"];
+const nombres = ["PINTURA","GRAFITO","OTROS"];
 
-function cambiarPagina(index){
+function cambiarPagina(i){
   const paginas = document.querySelectorAll(".pagina");
   const carpetas = document.querySelectorAll(".carpeta");
 
-  paginaActual = index;
+  paginas.forEach(p=>p.classList.remove("activa"));
+  carpetas.forEach(c=>c.classList.remove("activa"));
 
-  paginas.forEach(p => p.classList.remove("activa"));
-  carpetas.forEach(c => c.classList.remove("activa"));
+  paginas[i].classList.add("activa");
+  carpetas[i].classList.add("activa");
 
-  paginas[index].classList.add("activa");
-  carpetas[index].classList.add("activa");
-
-  actualizarBotones();
+  paginaActual = i;
+  actualizar();
 }
 
-function actualizarBotones(){
-  const btnAnterior = document.getElementById("btnAnterior");
-  const btnSiguiente = document.getElementById("btnSiguiente");
+function actualizar(){
+  const prev = document.getElementById("prev");
+  const next = document.getElementById("next");
 
-  if(paginaActual === 0){
-    btnAnterior.innerHTML = "—";
-    btnAnterior.disabled = true;
-  } else {
-    btnAnterior.innerHTML = "← " + nombres[paginaActual - 1];
-    btnAnterior.disabled = false;
-  }
+  prev.innerHTML = paginaActual>0 ? "← "+nombres[paginaActual-1] : "—";
+  next.innerHTML = paginaActual<2 ? nombres[paginaActual+1]+" →" : "—";
 
-  if(paginaActual === nombres.length - 1){
-    btnSiguiente.innerHTML = "—";
-    btnSiguiente.disabled = true;
-  } else {
-    btnSiguiente.innerHTML = nombres[paginaActual + 1] + " →";
-    btnSiguiente.disabled = false;
-  }
+  prev.disabled = paginaActual===0;
+  next.disabled = paginaActual===2;
 }
 
-function siguiente(){
-  if(paginaActual < nombres.length - 1){
-    cambiarPagina(paginaActual + 1);
-  }
-}
+document.getElementById("prev").onclick=()=>cambiarPagina(paginaActual-1);
+document.getElementById("next").onclick=()=>cambiarPagina(paginaActual+1);
 
-function anterior(){
-  if(paginaActual > 0){
-    cambiarPagina(paginaActual - 1);
-  }
-}
-
-/* MODAL */
 function abrirModal(img){
-  document.getElementById("modal").style.display = "flex";
-  document.getElementById("imgModal").src = img.src;
-  document.getElementById("textoModal").innerHTML = img.dataset.info;
+  modal.style.display="flex";
+  imgModal.src=img.src;
+  textoModal.innerHTML=img.dataset.info;
 }
 
 function cerrarModal(){
-  document.getElementById("modal").style.display = "none";
+  modal.style.display="none";
 }
 
-/* INICIO */
-actualizarBotones();
+actualizar();
 
 </script>
 
