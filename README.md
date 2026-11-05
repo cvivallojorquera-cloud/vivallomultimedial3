@@ -1,3 +1,5 @@
+BITACORA DE TRABAJO 
+Kevin Vivallo
 <h1 style="color: blue;">Portafolio de artista visual</h1>
 
 Sitio web sobre mi trabajo artístico y lo que significa para mí lo multimedial. Durante el curso fui ajustando el fondo y la organización de las páginas. Luego adapté el sitio para presentarlo como portafolio de mi cuenta de arte en Instagram.
