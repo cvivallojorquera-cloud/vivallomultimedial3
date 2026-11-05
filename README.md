@@ -2,7 +2,7 @@
 
 Sitio web sobre mi trabajo artístico y lo que significa para mí lo multimedial. Durante el curso fui ajustando el fondo y la organización de las páginas. Luego adapté el sitio para presentarlo como portafolio de mi cuenta de arte en Instagram.
 
-<p><a href="file:///P:/TALLERMULTIMEDIAL/Kevin%20Vivallo/vivallomultimedial3-main/index.html"><strong>🌐 Abrir el sitio web</strong></a></p>
+[🌐 Abrir el sitio web](./index.html)
 
 <h2 style="color: blue;">Archivos del sitio</h2>
 
