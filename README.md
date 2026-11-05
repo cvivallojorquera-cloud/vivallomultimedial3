@@ -2,7 +2,7 @@
 
 Sitio web sobre mi trabajo artístico y lo que significa para mí lo multimedial. Durante el curso fui ajustando el fondo y la organización de las páginas. Luego adapté el sitio para presentarlo como portafolio de mi cuenta de arte en Instagram.
 
-[🌐 Abrir el sitio web](./index.html)
+[🌐 Abrir el sitio web](https://cvivallojorquera-cloud.github.io/vivallomultimedial3/)
 
 <h2 style="color: blue;">Archivos del sitio</h2>
 
